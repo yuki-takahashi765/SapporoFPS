@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public ParticleSystem effect;//インスペクター上にエフェクト設定が行える用
+    [Header("再生するパーティクルの設定")]
+    public ParticleSystem effect;//
     private float timeElapsed;
+    [Header("奇数秒目に移動する距離")]
     public float X=-0.05f;
     public float Y=0f;
     public float Z = 0;
+    [Header("偶数秒目に移動する距離")]
     public float X2= 0.05f;
     public float Y2= 0.15f;
     public float Z2=0;
