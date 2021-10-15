@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/YukiScene.unity
+    guid: dc1ebc0b54979a14fbdbbd6fe947f058
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 95a945270f2898d4f8e3c4f7c21bee04, type: 2}
