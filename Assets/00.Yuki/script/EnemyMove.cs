@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [Header("再生するパーティクルの設定")]
-    public ParticleSystem effect;//
+    public ParticleSystem effect;
     private float timeElapsed;
     [Header("奇数秒目に移動する距離")]
     public float X=-0.05f;
@@ -47,7 +47,7 @@ public class EnemyMove : MonoBehaviour
 
     void OnCollisionEnter(Collision obj)
     {
-        if (obj.transform.name == "ShotCube(Clone)")
+        if (obj.transform.name == "PlayerShot(Clone)")
         //　「""」の中はどのオブジェクトと衝突するか
         //　このソースはShotCubeという弾を打った時に生成されている「ShotCube(Clone)」で設定
         {

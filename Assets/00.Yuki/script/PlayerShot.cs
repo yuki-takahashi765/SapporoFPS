@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shot : MonoBehaviour
+public class PlayerShot : MonoBehaviour
 {
 
     public GameObject prefab;

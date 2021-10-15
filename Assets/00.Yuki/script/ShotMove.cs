@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ShotMove : MonoBehaviour
 {
+    [Header("x：横,y：高さ,z：奥行き")]
+    [Header("射出速度/向き設定")]
+    public float x;
+    public float y;
+    public float z=2.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +19,6 @@ public class ShotMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0f, 0f, 3f);
+        transform.Translate(x, y, z);
     }
 }
