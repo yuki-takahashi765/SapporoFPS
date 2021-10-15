@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShotMove : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
