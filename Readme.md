@@ -23,6 +23,9 @@ https://assetstore.unity.com/packages/3d/characters/unity-chan-model-18705
 - WebGL日本語入力  
 https://github.com/kou-yeung/WebGLInput
 
+- Third Person Controller - Basic Locomotion FREE  
+https://assetstore.unity.com/packages/tools/game-toolkits/third-person-controller-basic-locomotion-free-82048
+
 #### 通信周り
 - PUN 2 無料版  
 https://assetstore.unity.com/packages/tools/network/pun-2-free-119922
