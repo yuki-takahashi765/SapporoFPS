@@ -8,7 +8,7 @@
 
 
 # デモ
-https://acro-takahashi.github.io/SapporoFPS/TestPlay/
+https://acro-takahashi.github.io/SapporoFPS/
 
 # 開発環境
 unity 2020.3.19f1
