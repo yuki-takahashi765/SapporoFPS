@@ -23,7 +23,7 @@ public class EnemyShot : MonoBehaviour
             //カウントをリセット
             timeCount = 0;
             //弾を生成
-            var pos = transform.position + transform.forward * 2 + transform.up * 1;
+            var pos = transform.position + transform.forward * 2 ;
             Instantiate(enemyShotPrefab, pos, transform.rotation);
            // Instantiate(enemyShotPrefab, transform.position, Quaternion.identity);
         }
