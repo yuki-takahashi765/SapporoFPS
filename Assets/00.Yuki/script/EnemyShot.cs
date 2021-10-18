@@ -24,8 +24,9 @@ public class EnemyShot : MonoBehaviour
             timeCount = 0;
             //íeÇê∂ê¨
             var pos = transform.position + transform.forward * 2 ;
-            Instantiate(enemyShotPrefab, pos, transform.rotation);
-           // Instantiate(enemyShotPrefab, transform.position, Quaternion.identity);
+            var del = Instantiate(enemyShotPrefab, pos, transform.rotation);
+
+            Destroy(del, 1.0f);
         }
     }
 }

@@ -53,6 +53,7 @@ public class EnemyMove : MonoBehaviour
         {
             effect.Play();//エフェクトに設定されていたものを再生
             Debug.Log("hit");//デバッグ用。当たったときにコンソールにhitが出ていたらここまで通ってる
+            Destroy(obj.gameObject);
         }
     }
 }
