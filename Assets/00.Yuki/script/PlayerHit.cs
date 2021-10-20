@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHit : MonoBehaviour
 {
+    [Header("HPのUIテキストをD＆D")]
+    public Text hitPointText;
+
     [Header("再生するパーティクルの設定")]
     public ParticleSystem effect;
     public int HP = 2;
@@ -26,6 +30,14 @@ public class PlayerHit : MonoBehaviour
                 }
 
             }
+
+            string str = hitPointText.text;
+            string str1 = str.Substring(0, str.IndexOf(":") + 1);
+            Debug.Log(str1);
+            string str2 = str.Substring(str.IndexOf(":") + 1);
+            Debug.Log(str2);
+            str2 =HP.ToString();
+            hitPointText.text = str1 + str2;
         }
     }
 }
