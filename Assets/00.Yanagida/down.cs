@@ -30,7 +30,7 @@ public class down : MonoBehaviour
             gameObject.transform.position = pos;
             m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyUp(KeyCode.C))
         {
             Vector3 pos = gameObject.transform.position;
 
