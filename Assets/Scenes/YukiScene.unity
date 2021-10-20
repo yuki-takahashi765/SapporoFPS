@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 2752629916197050383, guid: fe1ffbcec134ca1478d8247c9ced216e, type: 3}
+      propertyPath: shotInterval
+      value: 2.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1ffbcec134ca1478d8247c9ced216e, type: 3}
 --- !u!1 &1045451168
@@ -363,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 2268356661750327277, guid: fe1ffbcec134ca1478d8247c9ced216e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752629916197050383, guid: fe1ffbcec134ca1478d8247c9ced216e, type: 3}
+      propertyPath: shotInterval
+      value: 2.94
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1ffbcec134ca1478d8247c9ced216e, type: 3}
@@ -1498,6 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 263495713}
+  HP: 2
 --- !u!1 &8786969098876620614
 GameObject:
   m_ObjectHideFlags: 0
