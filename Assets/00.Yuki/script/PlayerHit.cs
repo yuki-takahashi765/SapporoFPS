@@ -1,3 +1,4 @@
+using Invector.vCharacterController;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class PlayerHit : MonoBehaviour
     [Header("再生するパーティクルの設定")]
     public ParticleSystem effect;
     public int HP = 2;
+    [Header("HP0のときに削除する自キャラを追加")]
+    public GameObject TestUnityChan;
+
+    public float runningSpeed { get; private set; }
+
     void OnCollisionEnter(Collision obj)
     {
         if (obj.transform.name == "EnemyShot(Clone)")
@@ -26,9 +32,12 @@ public class PlayerHit : MonoBehaviour
                 Debug.Log(HP);
                 if (HP == 0)
                 {
-                    Debug.Log("Gameover");
+                    Debug.Log("操作OFF後");
+                    Destroy(this.GetComponent<vThirdPersonInput>());
+                    List<KeyCode> disabledKeys = new List<KeyCode>();
+                    Destroy(this.GetComponent<vThirdPersonMotor>());
+                    Destroy(TestUnityChan);
                 }
-
             }
 
             string str = hitPointText.text;
@@ -38,6 +47,12 @@ public class PlayerHit : MonoBehaviour
             Debug.Log(str2);
             str2 =HP.ToString();
             hitPointText.text = str1 + str2;
+
         }
+    }
+
+    void Update()
+    {
+ 
     }
 }
