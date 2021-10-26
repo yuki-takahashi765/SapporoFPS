@@ -51,8 +51,11 @@ public class PlayerHit : MonoBehaviour
         }
     }
 
-    void Update()
+    void Start()
     {
- 
+        string str = hitPointText.text;
+        string str1 = str.Substring(0, str.IndexOf(":") + 1);
+        string str2 = HP.ToString();
+        hitPointText.text = str1 + str2;
     }
 }
