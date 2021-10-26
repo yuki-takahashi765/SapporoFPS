@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shot : MonoBehaviour
 {
     public GameObject prefab;
     private float timeElapsed;
+    public int shotCount = 10; //弾の数
+    private float shotInterval;
+    public Text shotText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +21,35 @@ public class shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            // 前方に発射
-            var pos = transform.position + transform.forward * 2 + transform.up * 1;
-            var del = Instantiate(prefab, pos, transform.rotation);
+           shotInterval += 1;
+            if (shotInterval % 5 == 0 && shotCount > 0)　//shotCountが0になるまで発射動作する
+            {
+                shotCount -= 1;
 
-            Destroy(del, 1.0f);
+                // 前方に発射
+                 var pos = transform.position + transform.forward * 2 + transform.up * 1;
+                var del = Instantiate(prefab, pos, transform.rotation);
+
+               
+
+                   
+                
+                    Destroy(del, 1.0f);
+            }
         }
+        else if (Input.GetKeyDown(KeyCode.R))　//shotCountが0になった時、Rキーでリロードする
+        {
+            shotCount = 10;
 
+        }
+        string str = shotText.text;
+        string str1 = str.Substring(0, str.IndexOf(":") + 1);
+        string str2 = str.Substring(str.IndexOf(":") + 1);
+        str2 = shotCount.ToString();
+        shotText.text = str1 + str2;
+        
 
     }
 }

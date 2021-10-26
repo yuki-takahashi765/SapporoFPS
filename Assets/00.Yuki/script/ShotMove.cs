@@ -20,6 +20,6 @@ public class ShotMove : MonoBehaviour
     void Update()
     {
         transform.Translate(x, y, z);
-
+        
     }
 }
