@@ -24,6 +24,8 @@ public class shot : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
            shotInterval += 1;
+            Debug.Log("shotInterval"+shotInterval);//コンソールに出るように髙橋追加
+            Debug.Log("shotCount"+shotCount);//コンソールに出るように髙橋追加
             if (shotInterval % 5 == 0 && shotCount > 0)　//shotCountが0になるまで発射動作する
             {
                 shotCount -= 1;
@@ -41,7 +43,7 @@ public class shot : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.R))　//shotCountが0になった時、Rキーでリロードする
         {
-            shotCount = 10;
+            shotCount = 10;//ここ10弾固定になっちゃうからもう一つ変数用意して同値代入出来るようにしたほうが楽かも
 
         }
         string str = shotText.text;
