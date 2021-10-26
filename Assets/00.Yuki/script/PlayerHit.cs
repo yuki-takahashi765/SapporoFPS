@@ -15,9 +15,11 @@ public class PlayerHit : MonoBehaviour
     [Header("HP0‚Ì‚Æ‚«‚Éíœ‚·‚é©ƒLƒƒƒ‰‚ÆƒJƒƒ‰‚ğ’Ç‰Á")]
     public GameObject playerPrefab;
     public GameObject deleteCamera;
+    public GameObject CameraDeath;
 
     [Header("HP0‚Ì‚Æ‚«‚É’Ç‰Á‚·‚éƒJƒƒ‰")]
     public GameObject addCamera;
+    public GameObject aonCamerasonCamera;
 
 
     void OnCollisionEnter(Collision obj)
