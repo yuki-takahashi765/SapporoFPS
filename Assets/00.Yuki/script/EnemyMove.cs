@@ -7,6 +7,11 @@ public class EnemyMove : MonoBehaviour
     [Header("再生するパーティクルの設定")]
     public ParticleSystem effect;
     private float timeElapsed;
+
+    [Header("HP0のときに削除するキャラを入れる。つまりこのスクリプト入れたプレハブ")]
+    public GameObject Prefab;
+    public int HP = 2;
+
     [Header("奇数秒目に移動する距離")]
     public float X=-0.05f;
     public float Y=0f;
@@ -54,6 +59,24 @@ public class EnemyMove : MonoBehaviour
             effect.Play();//エフェクトに設定されていたものを再生
             Debug.Log("hit");//デバッグ用。当たったときにコンソールにhitが出ていたらここまで通ってる
             Destroy(obj.gameObject);
+
+            if (HP > 0)
+            {
+                HP--;
+                Debug.Log(HP);
+                if (HP == 0)
+                {
+                    //hitPointText.text = "";
+                    Destroy(Prefab);
+                }
+                else
+                {
+                    //string str = hitPointText.text;
+                    //string str1 = str.Substring(0, str.IndexOf(":") + 1);
+                    //string str2 = HP.ToString();
+                    //hitPointText.text = str1 + str2;
+                }
+            }
         }
     }
 }
