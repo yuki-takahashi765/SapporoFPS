@@ -34,5 +34,28 @@ public class PlayerWarp : MonoBehaviour
             return;
         }
         timeElapsed = 0;
+
+    }
+    void OnCollisionEnter(Collision obj)
+    {
+        if (obj.transform.name == "WarpObject")
+        //　「""」の中はどのオブジェクトと衝突するか
+        {
+            timeElapsed += Time.deltaTime;
+            if (timeElapsed <= 1)
+            {
+                GetComponent<Invector.vCharacterController.vThirdPersonInput>().enabled = false;
+                transform.position = new Vector3(X, Y, Z);
+                return;
+            }
+
+
+            if (timeElapsed <= 2)
+            {
+                GetComponent<Invector.vCharacterController.vThirdPersonInput>().enabled = true;
+                return;
+            }
+            timeElapsed = 0;
+        }
     }
 }
