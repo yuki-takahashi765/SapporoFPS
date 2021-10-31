@@ -10,7 +10,8 @@ public class EnemyMove : MonoBehaviour
 
     [Header("HP0のときに削除するキャラを入れる。つまりこのスクリプト入れたプレハブ")]
     public GameObject Prefab;
-    public int HP = 2;
+    public  int constHP = 2;
+    private int HP;//HPの初期値を保存する
 
     [Header("奇数秒目に移動する距離")]
     public float X=-0.05f;
@@ -21,13 +22,20 @@ public class EnemyMove : MonoBehaviour
     public float Y2= 0.15f;
     public float Z2=0;
 
+    [Header("自動取得のため変更不要")]
+    public Vector3 DefaultPos;
+
+    void Start()
+    {
+        HP = constHP;
+        DefaultPos = gameObject.transform.position;
+    }
 
     // Update is called once per frame
     void Update()
     {
 
         timeElapsed += Time.deltaTime;
-
         if (timeElapsed <= 1)
         {
             transform.Translate(X, Y, Z);
@@ -66,9 +74,13 @@ public class EnemyMove : MonoBehaviour
                 Debug.Log(HP);
                 if (HP == 0)
                 {
-                    //hitPointText.text = "";
-                    Destroy(Prefab);
+                    HP = constHP;
+
+                    gameObject.transform.position = DefaultPos;
+
+                    Prefab.SetActive(false);
                 }
+
                 else
                 {
                     //string str = hitPointText.text;
