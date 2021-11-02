@@ -354,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vBasicController_Ethan 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7134562798917546239, guid: 95242ec6c81b6c54595dcd3d20afebe9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95242ec6c81b6c54595dcd3d20afebe9, type: 3}
 --- !u!1 &164638832
@@ -1566,7 +1571,7 @@ PrefabInstance:
     - target: {fileID: 1715809743757209077, guid: 3d7a44937e5115a438aa55e9de37af74,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1715809743757209087, guid: 3d7a44937e5115a438aa55e9de37af74,
         type: 3}
@@ -2131,7 +2136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1022837666
 MonoBehaviour:
   m_ObjectHideFlags: 0
