@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 2268356663329692308}
+  Prefab: {fileID: 2268356661750327265}
+  HP: 2
   X: -0.05
   Y: 0
   Z: -0.17
