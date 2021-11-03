@@ -18,7 +18,7 @@ public class PlayerShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetMouseButtonDown(0))
         {
             // ‘O•û‚É”­ŽË
             var pos = transform.position + transform.forward * 2 + transform.up * 1;
