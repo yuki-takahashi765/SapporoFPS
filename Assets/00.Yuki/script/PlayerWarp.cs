@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerWarp : MonoBehaviour
 {
-    [Header("ワープする座標（Wキー）")]
+    [Header("ワープする座標（Rキー）")]
     public float X = 0f;
     public float Y = 0f;
     public float Z = 0f;
@@ -17,7 +17,7 @@ public class PlayerWarp : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             timeElapsed += Time.deltaTime;
             if (timeElapsed <= 1)
