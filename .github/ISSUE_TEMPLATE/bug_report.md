@@ -27,4 +27,3 @@ about: バグ改善のための報告issue
 Node.js version:
 NPM/Yarn version
 Operating System:
-Additional tools:
